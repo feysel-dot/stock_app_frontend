@@ -1,0 +1,13 @@
+.table-row-light {
+    background-color: #ffffff;
+    /* white */
+}
+
+.table-row-dark {
+    background-color: #f7f7f7;
+    /* light grey */
+}
+
+.ant-table-tbody>tr:hover>td {
+    background: #e6f7ff !important;
+}
