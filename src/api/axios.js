@@ -27,7 +27,7 @@ export const removeAuth = () => {
 // ==========================
 // ✅ Use environment variable for baseURL
 const instance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL + "/api" || "http://localhost:3000/api",
+  baseURL: import.meta.env.VITE_API_URL + "/api" || "https://backend.hahu-aluminium.com/api",
   timeout: 30000,
   headers: { "Content-Type": "application/json" },
 });
@@ -62,7 +62,7 @@ instance.interceptors.response.use(
         const refreshToken = getRefreshToken();
         if (refreshToken) {
           const res = await axios.post(
-            `${import.meta.env.VITE_API_URL || "http://localhost:3000/api"}/auth/refresh`,
+            `${import.meta.env.VITE_API_URL || "https://backend.hahu-aluminium.com/api"}/auth/refresh`,
             { token: refreshToken }
           );
 
